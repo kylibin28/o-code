@@ -17,11 +17,11 @@ public class Games implements Identifiable<Integer> {
     @Column(name = "id_game")
     private Integer id_game;
 
-    @Column(name = "startDate")
-    private Date startDate;
+    @Column(name = "dateOfGame")
+    private Date dateOfGame;
 
-    @Column(name = "endDate")
-    private Date endDate;
+    @Column(name = "attemptsCount")
+    private int attemptsCount;
 
     @ManyToOne()
     @JoinColumn(name = "id_user")
@@ -35,20 +35,12 @@ public class Games implements Identifiable<Integer> {
         this.id_game = id_game;
     }
 
-    public Date getStartDate() {
-        return startDate;
+    public Date getDateOfGame() {
+        return dateOfGame;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
+    public void setDateOfGame(Date dateOfGame) {
+        this.dateOfGame = dateOfGame;
     }
 
     public Users getId_user() {
@@ -59,16 +51,12 @@ public class Games implements Identifiable<Integer> {
         this.id_user = id_user;
     }
 
-    public long lengthOfGame(){
-       return endDate.getTime() - startDate.getTime();
-    }
-
     public Games() {
     }
 
-    public Games(Date startDate, Date endDate,Users id_user) {
-        this.startDate = startDate;
-        this.endDate = endDate;
+    public Games(Date dateOfGame, int attemptsCount ,Users id_user) {
+        this.dateOfGame = dateOfGame;
+        this.attemptsCount = attemptsCount;
         this.id_user = id_user;
     }
 
@@ -81,8 +69,8 @@ public class Games implements Identifiable<Integer> {
     public String toString() {
         return "Games{" +
                 "id_game=" + id_game +
-                ", startDate=" + startDate.toString() +
-                ", endDate=" + endDate.toString() +
+                ", dateOfGame=" + dateOfGame.toString() +
+                ", attemptsCount=" + attemptsCount +
                 ", userLogin=" + id_user.getLogin()+
                 '}';
     }

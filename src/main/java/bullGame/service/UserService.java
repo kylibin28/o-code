@@ -1,5 +1,6 @@
 package bullGame.service;
 
+import bullGame.model.Games;
 import bullGame.model.Users;
 import bullGame.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +14,9 @@ import java.util.List;
 @Service
 public class UserService {
     @Autowired
-    private UserRepository userRepository;
+    private static UserRepository userRepository;
 
-    public List<Users> findAllUsers() {
+    public static List<Users> findAllUsers() {
         return userRepository.findAll();
     }
 
@@ -29,5 +30,9 @@ public class UserService {
 
     public Users findUserById(int userId) {
         return userRepository.findOne(userId);
+    }
+
+    public List<Games> findUsersGames(int id) {
+        return userRepository.findUsersGames(id);
     }
 }

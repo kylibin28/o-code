@@ -28,9 +28,13 @@ public class TestClass {
 
     @Test
     public void add() {
-        userService.saveUser(new Users("2", "2"));
-        gameService.saveGame(new Games(new Date(), new Date(2020, 10, 15, 15, 25, 33),
-                userService.findUserById(1)));
+//        userService.saveUser(new Users("3", "3"));
+//        userService.saveUser(new Users("4", "4"));
+//        gameService.saveGame(new Games(new Date(), 4, userService.findUserById(1)));
+//        gameService.saveGame(new Games(new Date(), 5, userService.findUserById(1)));
+        gameService.saveGame(new Games(new Date(), 3, userService.findUserById(3)));
+        gameService.saveGame(new Games(new Date(), 2, userService.findUserById(3)));
+        gameService.saveGame(new Games(new Date(), 1, userService.findUserById(3)));
 
     }
 

@@ -25,6 +25,28 @@ public class Users implements Identifiable<Integer> {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "name")
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    @Column(name = "surname")
+    private String surname;
+
     public Integer getId_user() {
         return id_user;
     }
@@ -63,9 +85,11 @@ public class Users implements Identifiable<Integer> {
     public Users() {
     }
 
-    public Users(String login, String password) {
+    public Users(String login, String password, String name, String surname) {
         this.login = login;
         this.password = password;
+        this.name = name;
+        this.surname = surname;
     }
 
     @Override
