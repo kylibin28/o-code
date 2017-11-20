@@ -39,7 +39,7 @@
     <!--</servlet-mapping>-->
 
     <welcome-file-list>
-        <welcome-file>jsp/access.jsp</welcome-file>
+        <welcome-file>jsp/Registration.jsp</welcome-file>
     </welcome-file-list>
 
 

@@ -5,61 +5,57 @@
   Time: 18:17
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Registration</title>
-    <link rel="stylesheet" type="text/css" href="../styleCSS/RegCss.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" />
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="../css/AccCss.css">
+
+
 </head>
 <body>
-<div class="p-x-1 p-y-3">
-    <form class="card card-block m-x-auto bg-faded form-width">
-        <legend class="m-b-1 text-xs-center">Регистрация</legend>
-        <div class="form-group input-group">
- <span class="has-float-label">
- <input class="form-control" id="first" type="text" placeholder="Имя"/>
- <label for="first">Имя</label>
- </span>
-            <span class="has-float-label">
- <input class="form-control" id="last" type="text" placeholder="Фамилия"/>
- <label for="last">Фамилия</label>
- </span>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-offset-3 col-md-6">
+            <form class="form-horizontal">
+                <span class="heading">РЕГИСТРАЦИЯ</span>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputSurname" placeholder="Surname">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputLogin" placeholder="Login">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group help">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="form-group help">
+                    <input type="password" class="form-control" id="inputConfPassword" placeholder="Confirm password">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Регистрация</button>
+                    <button type="submit" class="btn btn-default">Назад</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group input-group">
-            <span class="input-group-addon">@</span>
-            <span class="has-float-label">
- <input class="form-control" id="email" type="email" placeholder="name@example.com"/>
- <label for="email">E-mail</label>
- </span>
-        </div>
-        <div class="form-group has-float-label">
-            <input class="form-control" id="password" type="password" placeholder="••••••••"/>
-            <label for="password">Пароль</label>
-        </div>
-        <div class="form-group has-float-label">
-            <input class="form-control" id="password" type="password" placeholder="••••••••"/>
-            <label for="password">Пароль повторно</label>
-        </div>
-        <div class="form-group has-float-label">
-            <select class="form-control custom-select" id="country">
-                <option selected>Россия</option>
-                <option>Казахстан</option>
-                <option>Белоруссия</option>
-            </select>
-            <label for="country">Страна</label>
-        </div>
-        <div class="form-group">
-            <label class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox"/>
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Получать новости</span>
-            </label>
-        </div>
-        <div class="text-xs-center">
-            <button class="btn btn-block btn-primary" type="submit">Регистрация</button>
-        </div>
-    </form>
+
+    </div>
 </div>
+
 </body>
 </html>
