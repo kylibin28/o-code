@@ -1,6 +1,6 @@
 package bullGame.service;
 
-import bullGame.model.Game;
+import bullGame.model.Games;
 import bullGame.repository.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,19 +15,19 @@ public class GameService {
     @Autowired
     private GameRepository gameRepository;
 
-    public List<Game> findAllDepartments() {
+    public List<Games> findAllGames() {
         return gameRepository.findAll();
     }
 
-    public Game saveDepartment(Game user) {
+    public Games saveGame(Games user) {
         return gameRepository.save(user);
     }
 
-    public void deleteDepartment(Game user) {
+    public void deleteGame(Games user) {
         gameRepository.delete(user);
     }
 
-    public Game findDepartmentById(long gameId) {
+    public Games findGameById(int gameId) {
         return gameRepository.findOne(gameId);
     }
 }

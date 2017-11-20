@@ -1,6 +1,6 @@
 package bullGame.repository;
 
-import bullGame.model.Game;
+import bullGame.model.Games;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface GameRepository   extends JpaRepository<Game, Long> {
+public interface GameRepository   extends JpaRepository<Games, Integer> {
 }
