@@ -28,24 +28,22 @@ public class Users implements Identifiable<Integer> {
     @Column(name = "name")
     private String name;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     @Column(name = "surname")
     private String surname;
+
+    @Column(name = "midle")
+    private double midle;
+
+    @OneToMany(mappedBy = "id_user")
+    private Set<Games> games = new HashSet<Games>();
+
+    public double getMidle() {
+        return midle;
+    }
+
+    public void setMidle(double midle) {
+        this.midle = midle;
+    }
 
     public Integer getId_user() {
         return id_user;
@@ -79,8 +77,22 @@ public class Users implements Identifiable<Integer> {
         this.games = games;
     }
 
-    @OneToMany(mappedBy = "id_user")
-    private Set<Games> games = new HashSet<Games>();
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
 
     public Users() {
     }

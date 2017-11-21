@@ -1,6 +1,4 @@
-<%@ page import="bullGame.service.UserService" %>
-<%@ page import="java.util.List" %>
-<%@ page import="bullGame.model.Users" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: User
   Date: 23.04.2016
@@ -14,86 +12,38 @@
     <title>Авторизация</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
     <link rel="stylesheet" href="../css/AccCss.css">
-
-
+    <style type="text/css">
+        ${demo.css}
+    </style>
 </head>
-<body>
 
+<body >
+<%--<form action="servlet-parameters" method="GET">--%>
+    <div class="container">
+        <div class="row">
 
-<div class="container">
-    <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <form class="form-horizontal" action="servlet-parameters" method="GET">
+                    <span class="heading">АВТОРИЗАЦИЯ</span>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="inputLogin" placeholder="Login" name="inputLogin">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="form-group help">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="inputPassword">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">Вход</button>
 
-        <div class="col-md-offset-3 col-md-6">
-            <form class="form-horizontal">
-                <span class="heading">АВТОРИЗАЦИЯ</span>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="inputLogin" placeholder="Login">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="form-group help">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    <i class="fa fa-lock"></i>
-                </div>
-                <div class="form-group">
-                    <%--<div class="login-register">--%>
-                    <%--<a href="Registration.jsp">Регистрация</a>--%>
-                    <%--</div>--%>
+                        <%--<button type="submit" class="btn btn-default">Регистрация</button>--%>
+                    </div>
+                </form>
+            </div>
 
-                    <button type="submit" class="btn btn-default">Вход</button>
-
-                        <div class="login-register">
-                        <a href="Registration.jsp">Регистрация</a>
-                        </div>
-                    <%--<button type="submit" class="btn btn-default" href="Registration.jsp">Регистрация</button>--%>
-                </div>
-            </form>
-        </div>
-
-    </div><!-- /.row -->
-</div><!-- /.container -->
-
-
-<%--<div class="modal-dialog">--%>
-    <%--<div class="loginmodal-container">--%>
-        <%--<h4>Введите логин и пароль</h4><br>--%>
-        <%--<form>--%>
-            <%--<input type="text" name="login" placeholder="Логин">--%>
-            <%--<input type="text" name="password" placeholder="Пароль">--%>
-            <%--<input class="btn btn-success" type="submit" value="Войти">--%>
-            <%--<%--%>
-                <%--//                if (UserService.findAllUsers().isEmpty()) {--%>
-<%--//                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("showResult.jsp");--%>
-<%--//                    requestDispatcher.forward(request, response);--%>
-<%--//                }--%>
-                <%--String login = request.getParameter("login");--%>
-                <%--String password = request.getParameter("password");--%>
-                <%--if (login != null && password == null) {--%>
-            <%--%>--%>
-            <%--<h4 style="color:#ff0000">Введите пароль</h4>--%>
-            <%--<%--%>
-            <%--} else if (password != null) {--%>
-                <%--List<Users> usersList = UserService.findAllUsers();--%>
-                <%--for (Users user : usersList) {--%>
-                    <%--if (user.getLogin().equals(login) && user.getPassword().equals(password)) {--%>
-                        <%--session.setAttribute("user", user);--%>
-                        <%--RequestDispatcher requestDispatcher = request.getRequestDispatcher("showResult.jsp");--%>
-                        <%--requestDispatcher.forward(request, response);--%>
-                    <%--}--%>
-                <%--}--%>
-            <%--%><h4 style="color:#ff0000">Неверное имя пользователя или пароль</h4><%--%>
-            <%--}--%>
-        <%--%>--%>
-        <%--</form>--%>
-
-        <%--<div class="login-help">--%>
-            <%--<a href="#">Регистрация</a>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-
+        </div><!-- /.row -->
+    </div><!-- /.container -->
 <%--</form>--%>
 </body>
 </html>

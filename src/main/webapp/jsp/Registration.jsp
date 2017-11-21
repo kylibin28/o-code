@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-default">Регистрация</button>
-                    <button type="submit" class="btn btn-default">Назад</button>
+                    <button type="submit" class="btn btn-default" href="Access.jsp">Отмена</button>
                 </div>
             </form>
         </div>
